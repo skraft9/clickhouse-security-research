@@ -15,6 +15,8 @@
 ---
 
 ## Authorization
+**For research and authorized testing only.** Please do not use against systems without permission.
+
 The issue was reviewed by the ClickHouse team, who confirmed the behavior is “as expected” and explicitly approved public disclosure of this write-up.
 
 ---
