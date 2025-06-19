@@ -125,7 +125,7 @@ Until stricter controls are implemented upstream, the burden of protection falls
 ### Disclosure Details
 
 - This security flaw was reported to ClickHouse via Github Security Report feature on 2025-06-19.
-- ClickHouse team reviewed and responded to my report within the same day.
+- ClickHouse team reviewed and responded to my report within the same day. (Kudos to ClickHouse team!)
 - The vendor deemed the behavior as "expected" and declined to treat the report as an applicable vulnerability.
 - No fix is planned, but public disclosure was explicitly permitted.
 
