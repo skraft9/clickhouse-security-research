@@ -10,8 +10,7 @@
 #### CWE: CWE-250 (Execution with Unnecessary Privileges)  
 #### CVSS Base Score: 7.7 
 #### Vector String: `CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:N/I:H/A:N` 
-#### Type: Authenticated OS Command Execution via Executable Table  
-#### Exploit Risk: Medium  
+#### Type: Authenticated OS Command Execution via Executable Table
 ---
 
 ## Authorization
