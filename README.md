@@ -134,7 +134,7 @@ I included our correspondence below for transparency and learning purposes.
 
 ![image](https://github.com/user-attachments/assets/34699007-930d-4cdd-90d7-51222c7330b8)
 
-> Note: This security assessment reflects the perspective of a multi-user deployment model. Earlier drafts of this report used a CVSS base score of 6.0, reflecting conservative assumptions about attack complexity due to the prerequisite of a pre-created script and Executable() table.
+> Note: This security assessment reflects the perspective of a multi-user deployment model. Earlier drafts of this report used a CVSS base score of 6.0, reflecting conservative assumptions about attack complexity due to the prerequisite of a pre-created script and `Executable()` table.
 > 
 > This new score represents the full impact of unauthorized command execution triggered by a `SELECT` query and violating user privilege boundaries.
 
