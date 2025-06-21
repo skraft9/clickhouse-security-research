@@ -133,3 +133,33 @@ Until stricter controls are implemented upstream, the burden of protection falls
 I included our correspondence below for transparency and learning purposes.  
 
 ![image](https://github.com/user-attachments/assets/34699007-930d-4cdd-90d7-51222c7330b8)
+
+> Note: This security assessment reflects the perspective of a multi-user deployment model. Earlier drafts of this report used a CVSS base score of 6.0, reflecting conservative assumptions about attack complexity due to the prerequisite of a pre-created script and Executable() table.
+> 
+> This new score represents the full impact of unauthorized command execution triggered by a `SELECT` query and violating user privilege boundaries.
+
+## Estimated Base Score:
+
+**7.7 (High)**
+
+
+## Estimated CVSS Vector
+```
+CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:N/I:H/A:N
+```
+
+## Explanation of Each Metric
+
+| Metric                        | Value           | Justification                                                                                                        |
+| ----------------------------- | --------------- | -------------------------------------------------------------------------------------------------------------------- |
+| **AV: Attack Vector**         | **N (Network)** | The `low-priv` user can trigger the attack via a networked `SELECT` query (e.g., HTTP or native client).               |
+| **AC: Attack Complexity**     | **L (Low)**     | Any user with `SELECT` permissions can exploit the flaw given a preexisting `Executable()` table. |
+| **PR: Privileges Required**   | **L (Low)**     | The attacker only needs basic `SELECT` privileges — no CREATE, INSERT, or administrative access.                       |
+| **UI: User Interaction**      | **N (None)**    | No user interaction is required to exploit this vulnerability.                                                       |
+| **S: Scope**                  | **C (Changed)** | The attack breaks privilege boundaries — `SELECT` only users can trigger code authored by higher-privileged users.     |
+| **C: Confidentiality Impact** | **N (None)**    | No sensitive data is directly exposed as a result of exploitation.                                                   |
+| **I: Integrity Impact**       | **H (High)**    | The attacker can execute unauthorized system commands, leading to logic execution under elevated trust.    |
+| **A: Availability Impact**    | **N (None)**    | No service disruption or DoS impact is inherently caused by this exploit.                                            |
+
+---
+
