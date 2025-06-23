@@ -1,13 +1,13 @@
 ## ClickHouse Executable Table Abuse by Low Privilege User
 
+#### ID: CVE-2025-52969
 #### Date: 2025-06-19  
-#### Exploit Author: Seth Kraft  
+#### Author: Seth Kraft  
 #### Vendor Homepage: https://clickhouse.com/  
 #### Vendor Changelog: https://github.com/ClickHouse/ClickHouse/blob/master/CHANGELOG.md  
 #### Software Link: https://github.com/ClickHouse/ClickHouse  
 #### Version: 25.7.1.557 (official build)  
-#### Tested On: ClickHouse 25.7.1 (default configuration, Ubuntu 24.04)  
-#### CVE: CVE-2025-52969
+#### Tested On: ClickHouse 25.7.1 (default configuration, Ubuntu 24.04)
 #### CWE: CWE-250 (Execution with Unnecessary Privileges)  
 #### CVSS Base Score: 7.7 
 #### Vector String: `CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:N/I:H/A:N` 
