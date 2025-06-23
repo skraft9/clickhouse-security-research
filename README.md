@@ -1,6 +1,6 @@
 ## ClickHouse Executable Table Abuse by Low Privilege User
 
-#### ID: CVE-2025-52969
+#### CVE ID: [CVE-2025-52969](https://nvd.nist.gov/vuln/detail/CVE-2025-52969)
 #### Date: 2025-06-19  
 #### Author: Seth Kraft  
 #### Vendor Homepage: https://clickhouse.com/  
