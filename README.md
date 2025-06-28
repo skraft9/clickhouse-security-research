@@ -8,7 +8,7 @@
 #### Software Link: https://github.com/ClickHouse/ClickHouse  
 #### Version: 25.7.1.557 (official build)  
 #### Tested On: ClickHouse 25.7.1 (default configuration, Ubuntu 24.04)
-#### CWE: CWE-250 (Execution with Unnecessary Privileges)  
+#### CWE ID: [`CWE-420`](https://cwe.mitre.org/data/definitions/420.html)
 #### CVSS Base Score: 2.8 (Low)
 #### Vector String: `CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:C/C:N/I:L/A:N` 
 #### Type: Authenticated OS Command Execution via Executable Table
@@ -107,9 +107,9 @@ The external host will receive a request — proving that `lowpriv` was able to 
 
 ### Impact
 
-* **Vulnerability Type:** Execution with Unnecessary Privileges (CWE-250).
-* **Who Is Affected:** Environments that use `Executable()` tables and allow `SELECT` access broadly (including BI/reporting users).
-* **Impact:** Authenticated users with no command execution or write access can still leverage pre-created command definitions.
+* Authenticated users with no command execution or write access can still leverage pre-created command definitions.
+  
+**Who Is Affected:** Environments that use `Executable()` tables and allow `SELECT` access broadly (e.g., BI/reporting users).
 
 ---
 
