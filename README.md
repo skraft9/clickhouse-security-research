@@ -129,7 +129,7 @@ Until stricter controls are implemented upstream, the burden of protection falls
 * **2025-06-19:** Researcher reported to ClickHouse via Github Security Report
 * **2025-06-19:** ClickHouse dismissed the issue as intended behavior and confirmed that public disclosure was permitted
 * **2025-06-19:** Researcher responded with technical rebuttal, but vendor reiterated dismissal
-* **2025-06-19:** Researcher initiated public disclosure and requested CVE assignment
+* **2025-06-19:** Researcher initiated public disclosure and requested CVE assignment from MITRE
 * **2025-06-23:** MITRE assigned [CVE-2025-52969](https://nvd.nist.gov/vuln/detail/CVE-2025-52969) with disputed tag
 * **2025-06-23:** Researcher notified Clickhouse of `CVE-2025-52969` assignment
 * **2025-06-23:** ClickHouse clarified that a feature flag ticket was created to address this risk and improve application security
