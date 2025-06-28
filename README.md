@@ -9,8 +9,8 @@
 #### Version: 25.7.1.557 (official build)  
 #### Tested On: ClickHouse 25.7.1 (default configuration, Ubuntu 24.04)
 #### CWE: CWE-250 (Execution with Unnecessary Privileges)  
-#### CVSS Base Score: 7.7 
-#### Vector String: `CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:N/I:H/A:N` 
+#### CVSS Base Score: 2.8 (Low)
+#### Vector String: `CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:C/C:N/I:L/A:N` 
 #### Type: Authenticated OS Command Execution via Executable Table
 ---
 
@@ -127,35 +127,9 @@ Until stricter controls are implemented upstream, the burden of protection falls
 ## Disclosure Timeline
 
 * **2025-06-19:** Researcher reported to ClickHouse via Github Security Report
-* **2025-06-19:** ClickHouse responded, dismissing the issue as intended behavior — explicitly permitting disclosure
+* **2025-06-19:** ClickHouse dismissed the issue as intended behavior and confirmed that public disclosure was permitted
+* **2025-06-19:** Researcher responded with technical rebuttal, but vendor reiterated dismissal
 * **2025-06-19:** Researcher initiated public disclosure and requested CVE assignment
-* **2025-06-23:** [CVE-2025-52969](https://nvd.nist.gov/vuln/detail/CVE-2025-52969) was assigned CVSS 2.8 with disputed tag
-* **2025-06-23:** Researcher notified Clickhouse of CVE assignment
-* **2025-06-23:** ClickHouse clarified a feature flag ticket was created for this effort to enhance security
-
-
-## Estimated Base Score:
-
-**7.7 (High)**
-
-
-## Estimated CVSS Vector
-```
-CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:N/I:H/A:N
-```
-
-## Explanation of Each Metric
-
-| Metric                        | Value           | Justification                                                                                                        |
-| ----------------------------- | --------------- | -------------------------------------------------------------------------------------------------------------------- |
-| **AV: Attack Vector**         | **N (Network)** | The `low-priv` user can trigger the attack via a networked `SELECT` query (e.g., HTTP or native client).               |
-| **AC: Attack Complexity**     | **L (Low)**     | Any user with `SELECT` permissions can exploit the flaw given a preexisting `Executable()` table. |
-| **PR: Privileges Required**   | **L (Low)**     | The attacker only needs basic `SELECT` privileges — no CREATE, INSERT, or administrative access.                       |
-| **UI: User Interaction**      | **N (None)**    | No user interaction is required to exploit this vulnerability.                                                       |
-| **S: Scope**                  | **C (Changed)** | The attack breaks privilege boundaries — `SELECT` only users can trigger code authored by higher-privileged users.     |
-| **C: Confidentiality Impact** | **N (None)**    | No sensitive data is directly exposed as a result of exploitation.                                                   |
-| **I: Integrity Impact**       | **H (High)**    | The attacker can execute unauthorized system commands, leading to logic execution under elevated trust.    |
-| **A: Availability Impact**    | **N (None)**    | No service disruption or DoS impact is inherently caused by this exploit.                                            |
-
----
-
+* **2025-06-23:** [CVE-2025-52969](https://nvd.nist.gov/vuln/detail/CVE-2025-52969) was assigned with disputed tag
+* **2025-06-23:** Researcher notified Clickhouse of CVE-2025-52969 assignment
+* **2025-06-23:** ClickHouse confirmed a feature flag ticket was created to improve security.
