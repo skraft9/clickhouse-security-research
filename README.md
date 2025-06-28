@@ -124,20 +124,15 @@ Until stricter controls are implemented upstream, the burden of protection falls
 
 ---
 
-### Disclosure Details
+## Disclosure Timeline
 
-- This security flaw was reported to ClickHouse via Github Security Report feature on 2025-06-19.
-- ClickHouse team reviewed and responded to my report within the same day. (Kudos to ClickHouse team!)
-- The vendor deemed the behavior as "expected" and declined to treat the report as an applicable vulnerability.
-- No fix is planned, but public disclosure was explicitly permitted.
+* **2025-06-19:** Researcher reported to ClickHouse via Github Security Report
+* **2025-06-19:** ClickHouse responded, dismissing the issue as intended behavior — explicitly permitting disclosure
+* **2025-06-19:** Researcher initiated public disclosure and requested CVE assignment
+* **2025-06-23:** [CVE-2025-52969](https://nvd.nist.gov/vuln/detail/CVE-2025-52969) was assigned CVSS 2.8 with disputed tag
+* **2025-06-23:** Researcher notified Clickhouse of CVE assignment
+* **2025-06-23:** ClickHouse clarified a feature flag ticket was created for this effort to enhance security
 
-I included our correspondence below for transparency and learning purposes.  
-
-![image](https://github.com/user-attachments/assets/34699007-930d-4cdd-90d7-51222c7330b8)
-
-> Note: This security assessment reflects the perspective of a multi-user deployment model. Earlier drafts of this report used a CVSS base score of 6.0, reflecting conservative assumptions about attack complexity due to the prerequisite of a pre-created script and `Executable()` table.
-> 
-> This new score represents the full impact of unauthorized command execution triggered by a `SELECT` query and violating user privilege boundaries.
 
 ## Estimated Base Score:
 
