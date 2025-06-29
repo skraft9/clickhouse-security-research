@@ -133,3 +133,10 @@ Until stricter controls are implemented upstream, the burden of protection falls
 * **2025-06-23:** MITRE assigned [CVE-2025-52969](https://nvd.nist.gov/vuln/detail/CVE-2025-52969) with disputed tag
 * **2025-06-23:** Researcher notified Clickhouse of `CVE-2025-52969` assignment
 * **2025-06-23:** ClickHouse clarified that a feature flag ticket was created to address this risk and improve application security
+
+---
+
+## Why This Research Matters
+Before dismissing this research as trivial, understand that efforts like this often spark meaningful dialogue between security and infrastructure teams — leading to RBAC reevaluation, tighter privilege boundaries, and overall more effective approaches to application security.
+
+---
