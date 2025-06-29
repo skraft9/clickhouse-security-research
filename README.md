@@ -140,3 +140,8 @@ Until stricter controls are implemented upstream, the burden of protection falls
 Before dismissing this research as trivial, understand that efforts like this often spark meaningful dialogue between security and infrastructure teams — leading to RBAC reevaluation, tighter privilege boundaries, and overall more effective approaches to application security.
 
 ---
+
+## Disclaimer
+This work was conducted outside of my employment and reflects my personal efforts in cybersecurity research.
+
+---
