@@ -133,6 +133,8 @@ Until stricter controls are implemented upstream, the burden of protection falls
 * **2025-06-23:** MITRE assigned [CVE-2025-52969](https://nvd.nist.gov/vuln/detail/CVE-2025-52969) with disputed tag
 * **2025-06-23:** Researcher notified Clickhouse of `CVE-2025-52969` assignment
 * **2025-06-23:** ClickHouse clarified that a feature flag ticket was created to address this risk and improve application security
+* **2025-07-03:** ClickHouse obtains CNA status following this vulnerability dispute and informs the researcher that they will reject `CVE-2025-52969` under their new authority
+* **2025-07-03:** `CVE-2025-52969` is officially marked as "REJECTED" in the NVD, with ClickHouse listed as the source of withdrawal.
 
 ---
 
