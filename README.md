@@ -1,4 +1,4 @@
-## ClickHouse Executable Table Abuse by Low Privilege User
+## Authenticated Command Execution in ClickHouse via Predefined Executable Tables
 
 #### CVE ID: [CVE-2025-52969](https://nvd.nist.gov/vuln/detail/CVE-2025-52969)
 #### Date: 2025-06-19  
